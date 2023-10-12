@@ -9,7 +9,7 @@ class UftSpider(scrapy.Spider):
     def parse(self, response):
         links = response.css("li a::attr(href)").extract()
 
-        for link in links:
+        for link in links[0]:
             yield response.follow(link, callback=self.get_links)
 
     def get_links(self, response):
