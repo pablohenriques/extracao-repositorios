@@ -12,12 +12,16 @@ BOT_NAME = "repositorios"
 SPIDER_MODULES = ["repositorios.spiders"]
 NEWSPIDER_MODULE = "repositorios.spiders"
 
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "database"
+MONGODB_COLLECTION = "collection"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "repositorios (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -62,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
+# ITEM_PIPELINES = {
 #    "repositorios.pipelines.RepositoriosPipeline": 300,
-#}
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
